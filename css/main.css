@@ -1,9 +1,6 @@
-*{
-
-    border: 2px solid red;
-
+* {
+  border: 2px solid red;
 }
-
 
 html {
   height: 100vh;
