@@ -1,11 +1,32 @@
+*{
+
+    border: 2px solid red;
+
+}
+
+
 html {
   height: 100vh;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
-  color:white;
+  color: white;
 }
 
-nav{
-/* color:white; */
+nav {
+  /* color:white; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* flex-basis:20%; */
+  /* flex-grow: 4; */
+  margin: 1% 10% 0 0;
+}
+nav a {
+  margin: 0 3% 0 0;
+  font-size: 1.3em;
 }
 
+.title {
+  font-family: 'Bevan', cursive;
+  font-size: 4em;
+}

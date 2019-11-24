@@ -1,5 +1,13 @@
 /* start import of main section */
 
+/* main section for css */
+
 @import 'main.css';
+
+/* stars css style and animation */
+
 @import 'stars.css';
 
+/* responsive design rules */
+
+@import 'rwd.css';
