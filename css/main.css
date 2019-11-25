@@ -1,6 +1,6 @@
-* {
-  border: 2px solid red;
-}
+/* * { */
+/*   border: 2px solid red; */
+/* } */
 
 html {
   min-height: 100vh;
@@ -15,8 +15,7 @@ main {
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-
+  justify-content: end;
 }
 nav a {
   margin: 0 3% 0 0;
@@ -26,17 +25,19 @@ nav a {
 .title {
   font-family: 'Bevan', cursive;
   font-size: 4em;
-
 }
 
-.about{
+.about {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  
+  justify-content: center;
+}
+
+.about img {
+  width: 100%;
 }
 code {
   margin: 0 2px;
   padding: 0 5px;
-  border-radius: 3px; 
+  border-radius: 3px;
 }
