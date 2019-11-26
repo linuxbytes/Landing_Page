@@ -1,6 +1,6 @@
-/* * { */
-/*   border: 2px solid red; */
-/* } */
+/* *{ */ 
+/*   border: 2px solid red; */ 
+/* } */ 
 
 html {
   min-height: 100vh;
@@ -34,10 +34,6 @@ nav a {
 }
 
 .about img {
-  width: 200%;
+  width: 100%;
 }
-code {
-  margin: 0 2px;
-  padding: 0 5px;
-  border-radius: 3px;
-}
+
