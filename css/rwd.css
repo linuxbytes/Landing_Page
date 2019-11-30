@@ -27,9 +27,6 @@ footer {
 
 @media (max-width: 768px) {
   .bash-banner {
-<<<<<<< HEAD
-    width: 30%;
-=======
     width: 50%;
   }
   nav {
@@ -41,17 +38,13 @@ footer {
     text-decoration: none;
     display: block;
     font-size: 0.7em;
->>>>>>> 34b089e537fabff9cc28f718e587358703dbc337
   }
   .about {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-<<<<<<< HEAD
   .about img{
     width:75%;
   }
-=======
->>>>>>> 34b089e537fabff9cc28f718e587358703dbc337
 }
