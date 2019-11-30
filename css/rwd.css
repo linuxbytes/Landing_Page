@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  /* min-width: 100vw; */
+  /* width: 100vw; */
   min-height: 100vh;
   /* height: 100vh; */
   grid-template-columns: repeat(1, 1fr);
@@ -23,4 +23,18 @@ main {
 }
 footer {
   grid-area: footer;
+}
+
+@media (max-width: 768px) {
+  .bash-banner {
+    width: 30%;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about img{
+    width:75%;
+  }
 }
