@@ -26,12 +26,16 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: lightblue;
+  color: #4666ff;
 }
 
 /* selected link */
 a:active {
   color: blue;
+}
+
+.icon {
+  display: none;
 }
 
 main {
