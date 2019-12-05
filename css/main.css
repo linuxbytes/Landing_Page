@@ -34,6 +34,13 @@ a:active {
   color: blue;
 }
 
+#menu-link{
+  display:block;
+
+}
+.menu-link{
+  display:block;
+}
 .icon {
   display: none;
 }

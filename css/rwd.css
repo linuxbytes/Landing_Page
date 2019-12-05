@@ -25,17 +25,19 @@ footer {
   .bash-banner {
     width: 50%;
   }
-  nav a:not(:last-child){display: none;}
+  .menu-link {
+    display: none;
+  }
   nav a.icon {
     float: right;
     display: block;
   }
-  
+
   nav a {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
-    display: block;
+    /* display: block; */
     font-size: 0.7em;
   }
   .about {
@@ -46,5 +48,4 @@ footer {
   .about img {
     width: 75%;
   }
-
 }

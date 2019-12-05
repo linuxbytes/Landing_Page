@@ -1,5 +1,5 @@
 function myFunction() {
-  const x = document.getElementById('menu-link');
+  const x = document.getElementsByClassName('menu-link');
 
   if (x.style.display === 'block') {
     x.style.display = 'none';
