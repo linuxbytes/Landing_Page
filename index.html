@@ -1,59 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Manipulating the DOM</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
-  <link href="css/styles.css" rel="stylesheet">
-</head>
-<body>
-  <!-- HTML Follows BEM naming conventions 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Manipulating the DOM</title>
+    <!-- Load Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
-  <header class="page__header">
-    <nav class="navbar__menu">
-      <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list"></ul>
-    </nav>
-  </header>
-  <main>
-    <header class="main__hero">
-      <h1>Landing Page </h1>
+    <header class="page__header">
+      <nav class="navbar__menu">
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list"></ul>
+      </nav>
     </header>
-    <!-- Each Section has an ID (used for the anchor) and 
+    <main>
+      <header class="main__hero">
+        <img class="bash-banner" src="images/bash1.png" />
+      </header>
+      <!-- Each Section has an ID (used for the anchor) and 
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-    <section id="section1" data-nav="Section 1" class="your-active-class">
-      <div class="landing__container">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+      <section id="section1" data-nav="Section 1" class="your-active-class">
+        <div class="landing__container">
+          <h2>About</h2>
+          <p>
+            GNU Bash or simply Bash is a Unix shell and command language written
+            by Brian Fox for the GNU Project as a free software replacement for
+            the Bourne shell. Bash is a command processor that typically runs in
+            a text window where the user types commands that cause actions. Bash
+            can also read and execute commands from a file, called a shell
+            script.Bash is an sh-compatible shell that incorporates useful
+            features from the Korn shell (ksh) and C shell (csh).
+          </p>
+          <p>
+            Brian Fox began coding Bash on January 10, 1988 after Richard
+            Stallman became dissatisfied with the lack of progress being made by
+            a prior developer. Stallman and the Free Software Foundation (FSF)
+            considered a free shell that could run existing shell scripts so
+            strategic to a completely free system built from BSD and GNU code
+            that this was one of the few projects they funded themselves, with
+            Fox undertaking the work as an employee of FSF. Fox released Bash as
+            a beta, version .99, on June 8, 1989 and remained the primary
+            maintainer until sometime between mid-1992 and mid-1994, when he was
+            laid off from FSF and his responsibility was transitioned to another
+            early contributor, Chet Ramey
+          </p>
+        </div>
+      </section>
+      <section id="section2" data-nav="Section 2">
+        <div class="landing__container">
+          <h2>Features</h2>
+          <p>
+            Navigating the Bash shell is easy to do. But it takes time to learn
+            how to do well. Below are a number of shortcuts that make the
+            navigation process much more efficient. to name a few below
+          </p>
+          <ul>
+            <li>
+              Ctrl+C: Interrupt (kill) the current foreground process running in
+              in the terminal.
+            </li>
+            <li>Ctrl+S: Stop all output to the screen.</li>
+            <li>Ctrl+A or Home: Go to the beginning of the line.</li>
+            <li>Ctrl+E or End: Go to the end of the line.</li>
+            <li>Ctrl+D or Delete: Delete the character under the cursor.</li>
+          </ul>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section2" data-nav="Section 2">
-      <div class="landing__container">
-        <h2>Section 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+          <p>The improvements offered by Bash include:</p>
+          <ul>
+            <li>Command line editing</li>
+            <li>Unlimited size command history</li>
+            <li>Job Control</li>
+            <li>Shell Functions and Aliases</li>
+            <li>Indexed arrays of unlimited size</li>
+            <li>Integer arithmetic in any base from two to sixty-four</li>
+          </ul>
+          <p>
+            The Bash command syntax is a superset of the Bourne shell command
+            syntax. Bash supports brace expansion, command line completion
+            (Programmable Completion), basic debugging and signal handling
+            (using trap) since bash 2.05a among other features. Bash can execute
+            the vast majority of Bourne shell scripts without modification, with
+            the exception of Bourne shell scripts stumbling into fringe syntax
+            behavior interpreted differently in Bash or attempting to run a
+            system command matching a newer Bash builtin, etc. Bash command
+            syntax includes ideas drawn from the Korn shell (ksh) and the C
+            shell (csh) such as command line editing, command history (history
+            command), the directory stack, the $RANDOM and $PPID variables, and
+            POSIX command substitution syntax $(…).
+          </p>
+        </div>
+      </section>
+      <section id="section3" data-nav="Section 3">
+        <div class="landing__container">
+          <h2>Documentation</h2>
+          <p>
+            Documentation for Bash is available online
+            <a href="https://www.gnu.org/software/bash/manual/">link</a>
+            , as is documentation for most GNU software. You may also find more
+            information about Bash by running info bash or man bash, or by
+            looking at /usr/doc/bash/, /usr/local/doc/bash/, or similar
+            directories on your system. A brief summary is available by running
+            bash --help.
+          </p>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section3" data-nav="Section 3">
-      <div class="landing__container">
-        <h2>Section 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-  </main>
-  <footer class="page__footer">
-    <p>&copy Udacity</p>
-  </footer>
-
-</body>
+        </div>
+      </section>
+    </main>
+    <footer class="page__footer">
+      <p>&copy Udacity</p>
+      <h3>Licensing</h3>
+      <p>
+        Bash is free software; you can redistribute it and/or modify it under
+        the terms of the
+        <a href="https://www.gnu.org/licenses/gpl-3.0.html"
+          >GNU General Public License</a
+        >
+        as published by the Free Software Foundation; either version 3 of the
+        License, or (at your option) any later version.
+      </p>
+    </footer>
+  </body>
 </html>
