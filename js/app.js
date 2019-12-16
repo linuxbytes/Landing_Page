@@ -18,8 +18,8 @@
  *
  */
 
- const all_sections = document.querySelectorAll('section');
- const nav_bar = document.querySelectorById('#navbar__list');
+const all_sections = document.querySelectorAll('section');
+// const nav_bar = document.queryElementById('#navbar__list');
 
 /**
  * End Global Variables
@@ -34,11 +34,23 @@
  */
 
 // build the nav
-for(x in all_sections){
+// for (x in all_sections) {
+//   console.log(all_sections[x].data);
+// }
 
-console.log(all_sections[x]) ;
+// source: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_global_data
+// https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
+// // create each links for page section
 
-}
+all_sections.forEach(section => {
+  const nav_li = document.createElement('li');
+  const data_sections = section.getAttribute('data-nav');
+  nav_li.innerHTML = `<a href="#${section.id}">${data_sections}</a>`;
+  navbar__list.appendChild(nav_li);
+
+//   need to add viewport dimensions with JavaScript
+// source: https://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript
+});
 
 // Add class 'active' to section when near top of viewport
 
