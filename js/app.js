@@ -18,10 +18,8 @@
  *
  */
 
-const navbar = document.querySelector('#navbar__list');
-const li =  document.createElement('li');
-
-navbar.appendChild(li);
+ const all_sections = document.querySelectorAll('section');
+ const nav_bar = document.querySelectorById('#navbar__list');
 
 /**
  * End Global Variables
@@ -36,6 +34,11 @@ navbar.appendChild(li);
  */
 
 // build the nav
+for(x in all_sections){
+
+console.log(all_sections[x]) ;
+
+}
 
 // Add class 'active' to section when near top of viewport
 
