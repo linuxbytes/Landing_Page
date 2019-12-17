@@ -18,7 +18,7 @@
  *
  */
 
-const all_sections = document.querySelectorAll('section');
+const all_sections = document.querySelectorAll("section");
 // const nav_bar = document.queryElementById('#navbar__list');
 
 /**
@@ -43,18 +43,29 @@ const all_sections = document.querySelectorAll('section');
 // // create each links for page section
 
 all_sections.forEach(section => {
-  const nav_li = document.createElement('li');
-  const data_sections = section.getAttribute('data-nav');
+  const nav_li = document.createElement("li");
+  const data_sections = section.getAttribute("data-nav");
   nav_li.innerHTML = `<a href="#${section.id}">${data_sections}</a>`;
   navbar__list.appendChild(nav_li);
 
-//   need to add viewport dimensions with JavaScript
-// source: https://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript
-});
+  //   need to add viewport dimensions with JavaScript
+  // source: https://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript
+  function isInViewport(all_sections) {
+    let bounding = all_sections.getBoundingClientRect();
+    return (
+      bounding.top >= 0 &&
+      bounding.left >= 0 &&
+      bounding.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      bounding.right <=
+        (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
 
 // Add class 'active' to section when near top of viewport
 
 // Scroll to anchor ID using scrollTO event
+});
 
 /**
  * End Main Functions
