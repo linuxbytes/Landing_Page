@@ -20,7 +20,7 @@
 
 const all_sections = document.querySelectorAll("section");
 // const nav_bar = document.queryElementById('#navbar__list');
-
+all_sections.forEach(section => {
 /**
  * End Global Variables
  * Start Helper Functions
@@ -42,7 +42,7 @@ const all_sections = document.querySelectorAll("section");
 // https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
 // // create each links for page section
 
-all_sections.forEach(section => {
+
   const nav_li = document.createElement("li");
   const data_sections = section.getAttribute("data-nav");
   nav_li.innerHTML = `<a href="#${section.id}">${data_sections}</a>`;
@@ -62,10 +62,10 @@ all_sections.forEach(section => {
     );
   }
 
-// Add class 'active' to section when near top of viewport
+  // Add class 'active' to section when near top of viewport
 
-// Scroll to anchor ID using scrollTO event
-});
+  // Scroll to anchor ID using scrollTO event
+
 
 /**
  * End Main Functions
@@ -78,3 +78,4 @@ all_sections.forEach(section => {
 // Scroll to section on link click
 
 // Set sections as active
+});
