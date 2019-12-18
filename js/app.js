@@ -19,29 +19,28 @@
  */
 
 const all_sections = document.querySelectorAll("section");
-// const nav_bar = document.queryElementById('#navbar__list');
+
 all_sections.forEach(section => {
-/**
- * End Global Variables
- * Start Helper Functions
- *
- */
+  /**
+   * End Global Variables
+   * Start Helper Functions
+   *
+   */
 
-/**
- * End Helper Functions
- * Begin Main Functions
- *
- */
+  /**
+   * End Helper Functions
+   * Begin Main Functions
+   *
+   */
 
-// build the nav
-// for (x in all_sections) {
-//   console.log(all_sections[x].data);
-// }
+  // build the nav
+  // for (x in all_sections) {
+  //   console.log(all_sections[x].data);
+  // }
 
-// source: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_global_data
-// https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
-// // create each links for page section
-
+  // source: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_global_data
+  // https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
+  // // create each links for page section
 
   const nav_li = document.createElement("li");
   const data_sections = section.getAttribute("data-nav");
@@ -66,16 +65,30 @@ all_sections.forEach(section => {
 
   // Scroll to anchor ID using scrollTO event
 
+  /**
+   * End Main Functions
+   * Begin Events
+   *
+   */
 
-/**
- * End Main Functions
- * Begin Events
- *
- */
+  // Build menu
 
-// Build menu
+  // Scroll to section on link click
 
-// Scroll to section on link click
-
-// Set sections as active
+  // Set sections as active
 });
+
+// source : http://www.javascriptkit.com/javatutors/scrolling-html-bookmark-javascript.shtml
+document.querySelectorAll('a[href^="#"]').forEach(section => {
+  section.addEventListener("click", e => {
+    let hashval = section.getAttribute("href");
+    let target = document.querySelector(hashval);
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+    history.pushState(null, null, hashval);
+    e.preventDefault();
+  });
+});
+
