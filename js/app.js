@@ -33,11 +33,6 @@ all_sections.forEach(section => {
    *
    */
 
-  // build the nav
-  // for (x in all_sections) {
-  //   console.log(all_sections[x].data);
-  // }
-
   // source: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_global_data
   // https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
   // // create each links for page section
@@ -49,8 +44,8 @@ all_sections.forEach(section => {
 
   //   need to add viewport dimensions with JavaScript
   // source: https://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript
-  function isInViewport(all_sections) {
-    let bounding = all_sections.getBoundingClientRect();
+  function isInViewport(section) {
+    let bounding = section.getBoundingClientRect();
     return (
       bounding.top >= 0 &&
       bounding.left >= 0 &&
@@ -74,11 +69,8 @@ all_sections.forEach(section => {
   // Build menu
 
   // Scroll to section on link click
-
-  // Set sections as active
 });
 
-// source : http://www.javascriptkit.com/javatutors/scrolling-html-bookmark-javascript.shtml
 document.querySelectorAll('a[href^="#"]').forEach(section => {
   section.addEventListener("click", e => {
     let hashval = section.getAttribute("href");
@@ -91,4 +83,3 @@ document.querySelectorAll('a[href^="#"]').forEach(section => {
     e.preventDefault();
   });
 });
-
