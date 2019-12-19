@@ -39,7 +39,7 @@ all_sections.forEach(section => {
 
   const nav_li = document.createElement("li");
   const data_sections = section.getAttribute("data-nav");
-  nav_li.innerHTML = `<a href="#${section.id}">${data_sections}</a>`;
+  nav_li.innerHTML = `<a href="#${section.id}" class="menu__link">${data_sections}</a>`;
   navbar__list.appendChild(nav_li);
 
   //   need to add viewport dimensions with JavaScript
