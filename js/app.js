@@ -55,21 +55,24 @@ all_sections.forEach(section => {
         (window.innerWidth || document.documentElement.clientWidth)
     );
   }
-
-  // Add class 'active' to section when near top of viewport
-
-  // Scroll to anchor ID using scrollTO event
-
-  /**
-   * End Main Functions
-   * Begin Events
-   *
-   */
-
-  // Build menu
-
-  // Scroll to section on link click
 });
+
+// Get all buttons with class="btn" inside the container
+const li_a = document.getElementsByClassName("menu__link");
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < li_a.length; i++) {
+  li_a[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+
+    // If there's no active class
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" active", "");
+    }
+
+    // Add the active class to the current/clicked button
+    this.className += " active";
+  });
+}
 
 document.querySelectorAll('a[href^="#"]').forEach(section => {
   section.addEventListener("click", e => {
