@@ -18,21 +18,11 @@
  *
  */
 
+// console.log(bounding);
+
 const all_sections = document.querySelectorAll("section");
 
 all_sections.forEach(section => {
-  /**
-   * End Global Variables
-   * Start Helper Functions
-   *
-   */
-
-  /**
-   * End Helper Functions
-   * Begin Main Functions
-   *
-   */
-
   // source: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_global_data
   // https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
   // // create each links for page section
@@ -42,37 +32,28 @@ all_sections.forEach(section => {
   nav_li.innerHTML = `<a href="#${section.id}" class="menu__link">${data_sections}</a>`;
   navbar__list.appendChild(nav_li);
 
-  //   need to add viewport dimensions with JavaScript
-  // source: https://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript
-  function isInViewport(section) {
-    let bounding = section.getBoundingClientRect();
-    return (
-      bounding.top >= 0 &&
-      bounding.left >= 0 &&
-      bounding.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      bounding.right <=
-        (window.innerWidth || document.documentElement.clientWidth)
-    );
+  // highlight each link if click from menu__link
+  const li_a = document.getElementsByClassName("menu__link");
+  //
+  for (var i = 0; i < li_a.length; i++) {
+    li_a[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+
+      // If there's no active class
+      if (current.length > 0) {
+        current[0].className = current[0].className.replace(" active", "");
+      }
+
+      // Add the active class to the current/clicked button
+      this.className += " active";
+    });
   }
+
+  window.addEventListener("scroll", function() {
+
+  });
 });
 
-// Get all buttons with class="btn" inside the container
-const li_a = document.getElementsByClassName("menu__link");
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < li_a.length; i++) {
-  li_a[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-
-    // If there's no active class
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active", "");
-    }
-
-    // Add the active class to the current/clicked button
-    this.className += " active";
-  });
-}
 
 document.querySelectorAll('a[href^="#"]').forEach(section => {
   section.addEventListener("click", e => {
