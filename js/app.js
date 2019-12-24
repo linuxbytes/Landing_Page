@@ -34,10 +34,11 @@ all_sections.forEach(section => {
 
   // highlight each link if click from menu__link
   const li_a = document.getElementsByClassName("menu__link");
-  //
+  const current = document.getElementsByClassName("active");
+ 
   for (var i = 0; i < li_a.length; i++) {
     li_a[i].addEventListener("click", function() {
-      var current = document.getElementsByClassName("active");
+      
 
       // If there's no active class
       if (current.length > 0) {
@@ -49,9 +50,6 @@ all_sections.forEach(section => {
     });
   }
 
-  window.addEventListener("scroll", function() {
-
-  });
 });
 
 
