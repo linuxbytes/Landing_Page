@@ -22,9 +22,22 @@
 
 const all_sections = document.querySelectorAll("section");
 
+// https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
+
+function inViewPort(element) {
+  let bounding = element.getBoundingClientRect();
+  return (
+    bounding.top >= 0 &&
+    bounding.left >= 0 &&
+    bounding.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    bounding.right <=
+      (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
 all_sections.forEach(section => {
   // source: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_global_data
-  // https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
   // // create each links for page section
 
   const nav_li = document.createElement("li");
@@ -35,11 +48,9 @@ all_sections.forEach(section => {
   // highlight each link if click from menu__link
   const li_a = document.getElementsByClassName("menu__link");
   const current = document.getElementsByClassName("active");
- 
+
   for (var i = 0; i < li_a.length; i++) {
     li_a[i].addEventListener("click", function() {
-      
-
       // If there's no active class
       if (current.length > 0) {
         current[0].className = current[0].className.replace(" active", "");
@@ -51,7 +62,6 @@ all_sections.forEach(section => {
   }
 
 });
-
 
 document.querySelectorAll('a[href^="#"]').forEach(section => {
   section.addEventListener("click", e => {
