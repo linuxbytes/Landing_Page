@@ -44,33 +44,18 @@ all_sections.forEach(section => {
   const data_sections = section.getAttribute("data-nav");
   nav_li.innerHTML = `<a href="#${section.id}" class="menu__link">${data_sections}</a>`;
   navbar__list.appendChild(nav_li);
-  const section_link = navbar__list.querySelector(`a[href='\#${section.id}']`);
-  console.log(section_link.href);
-  
-  // highlight each link if click from menu__link
-  // const li_a = document.getElementsByClassName("menu__link");
-  // const current = document.getElementsByClassName("active");
-
-  // for (var i = 0; i < li_a.length; i++) {
-    
-  //   li_a[i].addEventListener("click", function() {
-
-  //     // If there's no active class
-  //     if (current.length > 0) {
-  //       // section_link.style.backgroundColor='black';
-  //       // section_link.style.color='white';
-  //       current[0].className = current[0].className.replace(" active", "");
-  //     }
-
-  //     // Add the active class to the current/clicked button
-  //     // section_link.style.backgroundColor='white';
-  //     // section_link.style.color='black';
-  //     this.className += " active";
-  //   });
-  //   // if (section_link == )
-  // }
-  
 });
+
+window.addEventListener("scroll", function() {
+  for (const section of all_sections) {
+      if (inViewPort(section)) {
+          section.classList.add("active");
+      } else {
+          section.classList.remove("active");
+      }
+  }
+});
+
 
 document.querySelectorAll('a[href^="#"]').forEach(section => {
   section.addEventListener("click", e => {
