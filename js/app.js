@@ -48,14 +48,18 @@ all_sections.forEach(section => {
 
 window.addEventListener("scroll", function() {
   for (const section of all_sections) {
-      if (inViewPort(section)) {
-          section.classList.add("active");
-      } else {
-          section.classList.remove("active");
-      }
+    if (inViewPort(section)) {
+      // add link hightlight
+      document.querySelector(`a[href="#${section.id}"]`).style.color = "red";
+
+      section.classList.add("active");
+    } else {
+      document.querySelector(`a[href="#${section.id}"]`).style.color = "black";
+
+      section.classList.remove("active");
+    }
   }
 });
-
 
 document.querySelectorAll('a[href^="#"]').forEach(section => {
   section.addEventListener("click", e => {
