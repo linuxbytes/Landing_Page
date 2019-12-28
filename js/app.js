@@ -48,6 +48,7 @@ all_sections.forEach(section => {
 });
 
 window.addEventListener("scroll", function() {
+  // source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
   for (const section of all_sections) {
     if (inViewPort(section)) {
       // add link hightlight
@@ -61,7 +62,7 @@ window.addEventListener("scroll", function() {
     }
   }
 });
-
+// source: https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
 document.querySelectorAll('a[href^="#"]').forEach(section => {
   section.addEventListener("click", e => {
     let hashval = section.getAttribute("href");
