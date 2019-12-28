@@ -89,12 +89,6 @@ section {
   transition: ease 0.3s all;
 }
 
- /* a.active {
-  background: #333;
-  color: #fff;
-  transition: ease 0.3s all;
-} */
-
 /* Header Styles */
 .page__header {
   background: #fff;
@@ -119,7 +113,7 @@ section {
 /* Landing Container Styles */
 .landing__container {
   padding: 1em;
-  text-align: left;
+  text-align: center;
 }
 
 @media only screen and (min-width: 35em) {
@@ -132,7 +126,7 @@ section {
 section:nth-of-type(even) .landing__container {
   margin-right: 0;
   margin-left: auto;
-  text-align: right;
+  text-align: center;
 }
 
 /* Background Circles */

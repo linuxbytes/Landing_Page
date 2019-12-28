@@ -18,12 +18,13 @@
  *
  */
 
-// console.log(bounding);
+// global value
 
 const all_sections = document.querySelectorAll("section");
 
 // https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
 
+// check for bounding
 function inViewPort(element) {
   let bounding = element.getBoundingClientRect();
   return (
